@@ -35,6 +35,6 @@ Clicks performed to a specific type of element considering the HTML tags that ty
 ## Results
 When the test finishes running, an HTML report and a video of the execution in a browser will be generated in the results folder.
 
-npm install cypress --save-dev
-npx cypress run --config-file ./smart-monkey-config.json --headed --no-exit
+- npm install cypress --save-dev
+- npx cypress run --config-file ./smart-monkey-config.json --headed --no-exit
 
