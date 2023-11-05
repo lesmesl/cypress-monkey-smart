@@ -186,7 +186,7 @@ function randDClick() {
                     for (let i = 0; i < $candidates.length; i++) {
                         let candidate = $candidates.get(i)
                         if (!Cypress.dom.isHidden(candidate)) {
-                           cy.log("revisar linea 00");
+                           cy.log("revisar linea 189");
                             cy.wrap(candidate).dblclick({force: true})
                             break
                         }
@@ -244,7 +244,7 @@ function randRClick() {
                     for (let i = 0; i < $candidates.length; i++) {
                         let candidate = $candidates.get(i)
                         if (!Cypress.dom.isHidden(candidate)) {
-                           cy.log("revisar linea 00");
+                           cy.log("revisar linea 247");
                             cy.wrap(candidate).rightclick({force: true})
                             break
                         }
@@ -300,7 +300,7 @@ function randHover() {
                         for (let i = 0; i < $candidates.length; i++) {
                             let candidate = $candidates.get(i)
                             if (!Cypress.dom.isHidden(candidate)) {
-                               cy.log("revisar linea 00");
+                               cy.log("revisar linea 303");
                                 cy.wrap(candidate).trigger('mouseover')
                                 break
                             }
@@ -585,9 +585,9 @@ function fillInput() { //Or fill form
                     info = `Input ${inp.id} was filled with ${type}`
                 } else if (inp.getAttribute("type") == "text" || inp.getAttribute("type") == "password") {
                     let type = faker.random.alphaNumeric
-                   cy.log("revisar linea 588");
-                    cy.wrap(inp).type(type);
-                    info = `Input ${inp.id} was filled with ${type}`
+                    cy.log("revisar linea 588 aca está el error");
+                    // cy.wrap(inp).type(type);
+                    // info = `Input ${inp.id} was filled with ${type}` 
                 } else {
                     focused = false;
                     info = `Input ${inp.id} is of type ${inp.getAttribute("type")}`
@@ -605,7 +605,7 @@ function clearInput() {
         if (inputs.length > 0) {
             var inp = inputs.item(getRandomInt(0, inputs.length));
             if (!Cypress.dom.isHidden(inp)) {
-               cy.log("revisar linea 00");
+               cy.log("revisar linea 608");
                 cy.wrap(inp).clear();
                 focused = true;
                 info = `Cleared input ${inp.id}`
